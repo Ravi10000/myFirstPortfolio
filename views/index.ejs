@@ -83,7 +83,7 @@
         <section class="skills" id="skills">
             <div class="skills-container">
                 <ul>
-                    <li class="transition2">
+                    <li class="transition3">
                         <div class="icon-container one">
                             <img src="./svgs/graphic design blue.svg" alt="UI/UX Design">
                         </div>
@@ -92,7 +92,7 @@
                             Build great and creative designs and awesome experiences with me.
                         </p>
                     </li>
-                    <li class="transition2">
+                    <li class="transition3">
                         <div class="icon-container two">
                             <img src="./svgs//front end blue.svg" alt="Front End">
                         </div>
@@ -101,7 +101,7 @@
                             Build cool and amezing lookng, responsive web sites with me.
                         </p>
                     </li>
-                    <li class="transition2">
+                    <li class="transition3">
                         <div class="icon-container theee">
                             <img src="./svgs/back end blue.svg" alt="Back End">
                         </div>
@@ -153,7 +153,7 @@
             
     })
         
-    gsap.registerPlugin(ScrollTrigger)
+    // gsap.registerPlugin(ScrollTrigger)
     let tl = gsap.timeline();
 
         tl.from('.content', {
@@ -185,16 +185,37 @@
             ease: Back.easeOut.config(1.7)
         })
         
-        // gsap.from('.transition2', {
-        //     ScrollTrigger:{
-        //         trigger: '.transition2',
-        //         start: 'top bottom'
-        //     },
-        //     y: 100,
-        //     opacity: 0,
-        //     duration: 1.2,
-        //     stagger: .3,
-        // })
+        gsap.from('.transition2', {
+            scrollTrigger:{
+                trigger: '.transition2',
+                start: 'top bottom'
+            },
+            y: 150,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .3,
+        })
+
+        gsap.from('.transition3', {
+            scrollTrigger:{
+                trigger: '.transition3',
+                start: 'top bottom'
+            },
+            y: 200,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .3,
+        })
+        gsap.from('.hire-me', {
+            scrollTrigger:{
+                trigger: '.hire-me',
+                start: 'top bottom'
+            },
+            y: 200,
+            opacity: 0,
+            duration: 1.5,
+            stagger: .3,
+        })
 
         
     </script>
