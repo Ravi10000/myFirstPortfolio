@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Msgs</title>
+    <link rel="stylesheet" href="allMsgs.css">
+</head>
+<body>
+    <h1>All Msgs</h1>
+<% for( let msg = 0; msg < msgs.length; msg++) { %>
+   <form action="/msg/<%= msgs[msg]._id %>?_method=DELETE" method="POST">
+    <div class="msg">
+        <p><span>Email:</span> <%= msgs[msg].email %> </p>
+        <p><span>Message:</span> <%= msgs[msg].content %> </p>
+        <button>Delete</button>
+    </div>
+   </form>
+<% } %>
+    
+</body>
+</html>

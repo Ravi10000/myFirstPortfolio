@@ -1,0 +1,53 @@
+.up-and-down{
+    transform: rotate(90deg);
+    animation: circleAnim 1s 2s infinite alternate-reverse;
+}
+
+.love{
+    animation: wow 1s 2s 1 alternate-reverse;
+}
+
+@keyframes wow{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes circleAnim{
+    from{
+    transform: translateY(30px) rotate(90deg);
+    }
+    to{
+        transform: translateY(0px) rotate(90deg);
+        }
+}
+
+.flash{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    font-size: 1em;
+    background: rgb(110, 223, 135);
+    border-radius:5px ;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    z-index: 5;
+}
+.flash button{
+    border: none;
+    background-color: rgba(179, 236, 192, 0.719);
+    font-size: 3em;
+}
+
+.flash img{
+    padding-left: 1em;
+    width: 1.5em;
+    margin-left: auto;
+}
